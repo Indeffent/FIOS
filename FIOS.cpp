@@ -14,13 +14,13 @@ int main() {
     int i;
     a = "|/-\\";
     //Sleep(5000);
-    cout << "Loading";
+    /*cout << "Loading";
     for (i = 0; i < 20; i++) {
     cout << '.'; p += '.'; Sleep(100); } system("cls");
     for (i = 0; i < 40; i++) {
     cout << "Loading" << p;
     cout << "  " << a[i % 4] << endl;
-    Sleep(50); system("cls"); }
+    Sleep(50); system("cls"); } */
     cout << "F.I.O.S. v0.1 Successfully Loaded" << endl << "> ";
     cin >> cnsl;
     p = '.';
@@ -63,7 +63,7 @@ int main() {
              } else if ((cnsl == "Open")||(cnsl == "open")) {
                  cout << "Введите имя файла" << endl << "> "; cin >> cr; fstream file(cr);
                  i = 0;
-                 while (file >> fs[i]) i++;
+                 while (file >> fs[i]) { i++; }
                  cout << "Файл '" << cr << "' успешно открыт. Хотите увидеть содержимое? (Yes/No)" << endl << "> "; cin >> cn;
                  if ((cn == "yes")||(cn == "Yes")) { cout << fs << endl << "> "; cin >> cnsl; } else
                  if ((cn == "no")||(cn == "No")) { cout << "В любое время вы сможете увидеть содержимое при помощи комманды 'Read'" << endl << "> "; cin >> cnsl; } else {
